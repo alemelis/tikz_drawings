@@ -6,3 +6,5 @@ This is a collection of drawings made with [TikZ](https://www.ctan.org/pkg/pgf?l
 - `compile.sh` contains the bash script to compile the main.tex file
 - [`3dplot.sty`](https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-3dplot?lang=en) is a library needed to compile cantilever.tex
 - drawing codes are stored in `/drawings` folder
+
+Compiled drawing can be seen [here](#).
