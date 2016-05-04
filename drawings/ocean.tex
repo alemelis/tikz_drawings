@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+
+\draw[<->] (0,6) node[left] {y} -- (0,0) -- (6,0) node[below] {x};
+
+\draw[thick, double, double=green, blue, fill=blue!30!white] (0,0)rectangle(5,5);
+\draw (5,2.5) node[right] {boundary};
+\draw[dotted] (0,0) -- (0,-1);
+\draw[<->] (0,-1) -- (5,-1);
+\draw[dotted] (5,0) -- (5,-1);
+\draw (2.5,-1) node[below] {\emph{size}};
+
+\draw[rotate=-45, xshift=-0.5cm, <->] (-1,0) -- (-1,7.1);
+\draw[rotate=-45, dotted] (-1,0) -- (-1.5,0);
+\draw[rotate=-45, dotted] (-1,7.1) -- (-1.5,7.1);
+\draw (1,4) node {\emph{length}};
+
+\draw[rotate=-45, yshift=-1cm, <->] (-1,0) -- (1,0);
+\draw[rotate=-45, dotted] (-1,0) -- (-1,-1);
+\draw[rotate=-45, dotted] (1,0) -- (1,-1);
+\draw (-1,-1) node {\emph{width}};
+
+\draw[rotate=-45, thick, double, double=yellow, color=green!30!white!80!blue, pattern color=green ,pattern=north east lines] (-1,0)rectangle(1,7.1) node[black, right] {\emph{current}};
+
+\draw[->, red, thick, xshift=0.7cm, yshift=-0.7cm] (2,2) node[right, black] {\emph{strength}} -- (2.5,2.5);
+
+\draw[thick, color=red, fill=pink] (0,0) node[anchor=north east, black] {\emph{start}} circle (0.1);
+\draw[thick, color=red, fill=pink] (5,5) node[anchor=south west, black] {\emph{end}} circle (0.1);
+
+
+\foreach \x/\angle in {-0.5/90, 0/90, 0.5/90} {
+    \foreach \y in {0.5, 1.5, 2.5, 3.5, 4.5, 5.5} {
+        \draw[->,thick, rotate=-45, green!50!black]  (\x, \y) -- ++(\angle:0.7);
+    }
+}
+
+\end{tikzpicture}

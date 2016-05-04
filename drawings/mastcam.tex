@@ -1,0 +1,53 @@
+\begin{tikzpicture}[scale=1.5]
+\tikzset{translate/.style={shift={(#1)}}}
+\tikzstyle{ground} = [fill, pattern=north east lines, draw=none, minimum width=0.75cm, minimum height=0.3cm]
+
+\draw[stealth-stealth] (0,3) node[right] {\tiny{$z$}} -- (0,2) -- (2,2) node[above] {\tiny{$y$}};
+
+\draw[violet!70, thin] (0,2) -- +(-30+3.5:4.482317);
+\draw[violet!70, thin] ([translate=-30+3.5:4.1]0,2) node[above, violet] {\tiny{$\gamma$}} arc (146.5:180:0.3);
+
+\node[violet!70] at ([translate=-30+5.5:3]0,2) {\tiny{$\varrho$}};
+
+\draw[|<->|, violet!70] (0,-0.5) -- (4.011379417,-0.5);
+\node[violet!70, above] at (2.005689708,-0.55) {\scriptsize{$d$}};
+
+\draw[dashdotted, blue!50!cyan] (0,2) -- +(-30:4);
+
+\draw[thin, green!50!black] (0,2) -- +(-37.5:3.2854);
+\draw[thin, green!50!black] (0,2) -- +(-30+7.5:5.226252);
+
+\draw[double] (0,0.75) -- (0,2);
+
+\draw[thick] (-0.4,0.75) -- (0.15,0.75) -- (0.15,0.2) -- (-0.4,0.2);
+\draw[decorate, decoration={snake, segment length=5.5mm, amplitude=0.25mm}] (-0.4,0.8) -- (-0.4,0.15);
+\draw[fill=black, double] (-0.2,0.15) circle (0.125);
+\draw[fill=white, white] (-0.2,0.15) circle (0.01);
+\node at (-0.125,0.5) {\tiny{\textsc{body}}};
+
+\draw[rotate around={-30:(0,2)}, fill=white, fill opacity = 0.95, thick] (-0.2,1.85) rectangle (0.2,2.15);
+
+\draw[rotate around={-30:(0,2)}, fill=black, fill opacity = 0.8, xshift=6] (-0.015,1.95) rectangle (0.05,2.05);
+\node[above] at (0.35,2.075) {\tiny{\textsc{head}}};
+
+\draw[-stealth, violet!70] (0.8,2) node[above] {\tiny{$\gamma$}} arc (0:-30+3.5:0.8);
+\draw[-stealth, blue!50!cyan] (1.1,2) node[above] {\tiny{$\varepsilon$}} arc (0:-30:1.1);
+
+\node[above, rotate=90] at (0.05,1.1) {\tiny{\textsc{mast}}};
+
+\draw[<->|] (-0.5,0) -- (-0.5,2);
+\node[left] at (-0.5,1) {\scriptsize{$h_c$}};
+
+\draw[green!50!black, stealth-stealth] ([translate=-30+7.5:2]0,2) arc (-30+7.5:-37.5:2) node[below] {\tiny{$\alpha$}};
+
+\draw[ground] (-1,0) rectangle (5,-0.2);
+\draw[thick] (-1,0) -- (5,0);
+
+\draw[<-] (-0.1,1.7) arc (120:390:0.2 and 0.1);
+\node[right] at (0,1.35) {\tiny{$\beta$}};
+
+\node at (1,0.1) {\tiny{\textsc{ground}}};
+
+\node at (3,3) {\scriptsize{\textsc{side view}}};
+
+\end{tikzpicture}

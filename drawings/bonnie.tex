@@ -1,0 +1,63 @@
+\def\layersep{1.2cm}
+
+\begin{tikzpicture}[node distance=\layersep]
+
+\tikzstyle{every pin edge}=[<-, shorten <=1pt, cyan!80!black!70]
+\tikzstyle{neuron}=[circle,minimum size=20pt, draw, thick];
+\tikzstyle{input neuron}=[neuron, fill=cyan!30, draw=cyan!80!black];
+\tikzstyle{output neuron}=[neuron, fill=cyan!30, draw=cyan!80!black];
+\tikzstyle{arrow}=[->,shorten >=1pt, shorten <=1pt, cyan!40];
+\tikzstyle{missing}=[dotted, black, shorten <=3pt, shorten >=3pt, cyan!80!black!70, thick];
+\tikzstyle{annot} = [text width=4em, text centered];
+
+\def \i {3}
+
+\foreach \name / \y in {1,\i}
+{	
+	\node[input neuron, pin={[cyan!50!black!60]left:$x_{\y}$}] (I-\name) at (0,-\y) {};
+	\node[below right of=I-\name] (dummy-\name) {};
+}
+\node[input neuron, fill=cyan!90, draw=cyan!50!black, pin={[pin edge={<-, thick, cyan!50!black},cyan!50!black]left:$x_{2}$}] (I-2) at (0,-2) {};
+\node[below right of=I-2] (dummy-2) {};
+
+\node[below of=I-\i] (dummyinput) {};
+\node[input neuron, pin={[cyan!50!black!60]left:$x_{m}$}, below of=dummyinput] (I-f) {};
+\path[missing] (I-\i) edge (I-f);
+
+\def \f {2}
+
+\foreach \name / \y in {1,...,\f}
+{
+	\node[output neuron, pin={[pin edge={->},cyan!50!black!60]right:$y_{\y}$}, right of=dummy-\y] (O-\name) {};
+}
+
+\node[right of=I-f] (dummyoutput) {};
+\node[output neuron, pin={[pin edge={->, thick, cyan!50!black},cyan!50!black]right:$y_{n}$}, above right of=dummyoutput, fill=cyan!90, draw=cyan!50!black] (O-f) {};
+\path[missing] (O-\f) edge (O-f);
+
+\foreach \source in {1,3}
+{
+	\foreach \dest in {1,...,\f}
+	{
+		\path[arrow] (I-\source) edge (O-\dest);
+	}
+	\path[arrow] (I-\source) edge (O-f);
+}
+
+\foreach \dest in {1,2}
+{
+	\path[arrow, cyan!70!black] (I-2) edge node[above] {$w_{\dest 2}$} (O-\dest);
+}
+
+\path[arrow, cyan!50!black, thick] (I-2) edge node[right] {$w_{n 2}$} (O-f);
+
+\foreach \dest in {1,...,\f}
+{
+	\path[arrow] (I-f) edge (O-\dest);
+}
+\path[arrow] (I-f) edge (O-f);
+
+\node[annot, above of = I-1, node distance=1cm] (Input) {Input};
+\node[annot, right of= Input, node distance=2cm] (Output) {Output};
+
+\end{tikzpicture}

@@ -1,0 +1,66 @@
+\tdplotsetmaincoords{60}{120}
+
+\begin{tikzpicture}[scale=2.75,tdplot_main_coords]
+
+\draw[pattern=north east lines, draw=none, opacity=0.5] (0,-0.1,-0.1) -- (0,0.5,-0.1) -- (0,0.5,0.26) -- (0,-0.1,0.26) -- cycle;
+
+\filldraw[white] (0,0,0.16) -- (0,0.42,0.16) -- (0,0.42,0) -- (3.9,0.42,0) -- (3.9,0,0) -- (3.9,0,0.16) -- cycle;
+\filldraw[white!50!cyan, opacity=0.3] (0,0,0.095) -- (0,0.42,0.095) -- (0,0.42,0) -- (3.9,0.42,0) -- (3.9,0,0) -- (3.9,0,0.095) -- cycle;
+%\filldraw[white!50!red, opacity=0.3] (0,0,0.16) -- (0,0.42,0.16) -- (0,0.42,0.095) -- (3.9,0.42,0.095) -- (3.9,0,0.095) -- (3.9,0,0.16) -- cycle;
+\filldraw[white!30!yellow!90!red, opacity=0.3] (0,0,0.16) -- (0,0.42,0.16) -- (0,0.42,0.095) -- (3.9,0.42,0.095) -- (3.9,0,0.095) -- (3.9,0,0.16) -- cycle;
+
+
+\draw[black!30, dashed] (3.9,0,0) -- (0,0,0) -- (0,0,0.095) -- (0,0,0.16);
+\draw[black!30, dashed] (0,0,0) -- (0,0.42,0);
+\draw[black!30, dashed] (3.9,0,0.095) -- (0,0,0.095) -- (0,0,0.095) -- (0,0.42,0.095);
+\draw[] (0,0.42,0.095) -- (3.9,0.42,0.095) -- (3.9,0,0.095);
+\draw[] (0,0,0.16) -- (0,0.42,0.16) -- (0,0.42,0) -- (3.9,0.42,0) -- (3.9,0,0) -- (3.9,0,0.16) -- cycle;
+\draw[] (0,0.42,0.16) -- (3.9,0.42,0.16) -- (3.9,0,0.16);
+\draw[] (3.9,0.42,0) -- (3.9,0.42,0.16);
+
+\draw[black!50, ultra thin] (3.9,0,0) -- (3.9,0,-0.1);
+\draw[black!50, ultra thin] (3.9,0.42,0) -- (3.9,0.42,-0.1);
+\draw[<->, ultra thin] (3.9,0,-0.1) -- (3.9,0.42,-0.1);
+\node[below, black!50] at (3.9,0.21,-0.1) {\tiny{b}};
+
+\draw[<->, ultra thin] (3.9,0.42,-0.1) -- (0,0.42,-0.1);
+\draw[black!50, ultra thin] (0,0.42,0) -- (0,0.42,-0.1);
+\node[below, black!50] at (1.8,0.42,-0.1) {\tiny{L}};
+
+\draw[<->, ultra thin] (3.9,-0.05,0) -- (3.9,-0.05,0.095);
+\draw[ultra thin, black!50] (3.9,0,0) -- (3.9,-0.05,0);
+\draw[ultra thin, black!50] (3.9,0,0.095) -- (3.9,-0.05,0.095);
+\node[left, black!50] at (3.9,-0.05,0.04525) {\tiny{$h_2$}};
+
+\draw[<->, ultra thin] (3.9,-0.05,0.095) -- (3.9,-0.05,0.16);
+\draw[ultra thin, black!50] (3.9,0,0.16) -- (3.9,-0.05,0.16);
+\node[left, black!50] at (3.9,-0.05,0.16) {\tiny{$h_1$}};
+
+%draw the main coordinate system axes
+\draw[-stealth, green!50!black!60] (0,0,0) -- (0.3,0,0) node[anchor=north]{\tiny{$y$}};
+\draw[-stealth, green!50!black!60] (0,0,0) -- (0,0.2,0) node[anchor=north]{\tiny{$x$}};
+\draw[-stealth, green!50!black!60] (0,0,0) -- (0,0,0.25) node[anchor=south]{\tiny{$z$}};
+
+\tdplotsetmaincoords{0}{0}
+\begin{scope}[scale=0.5,tdplot_main_coords, xshift=-3.5cm]
+\draw[ultra thin, black!50] (-0.7,0.2) rectangle (0.96,-1.45);
+\node[text width=2cm] at (0.3,0) {\tiny{$L=3.9\,mm$}};
+\node[text width=2cm] at (0.3,-0.25) {\tiny{$b=0.42\,mm$}};
+\node[text width=2cm] at (0.3,-0.5) {\tiny{$h_1=0.065\,mm$}};
+\node[text width=2cm] at (0.3,-0.75) {\tiny{$h_2=0.095\,mm$}};
+\draw (-0.5,-0.95) rectangle (-0.4,-1.05);
+%\draw[fill=white!50!red, opacity=0.3] (-0.5,-0.95) rectangle (-0.4,-1.05);
+\draw[fill=white!30!yellow!90!red, opacity=0.3] (-0.5,-0.95) rectangle (-0.4,-1.05);
+\node[text width=2cm] at (0.5,-1) {\tiny{piezo-ceramic}};
+\draw (-0.5,-1.2) rectangle (-0.4,-1.3);
+\draw[fill=white!50!cyan, opacity=0.3] (-0.5,-1.2) rectangle (-0.4,-1.3);
+\node[text width=2cm] at (0.5,-1.25) {\tiny{steel}};
+
+\node at (2.8,0.3) {\tiny{\textsc{root}}};
+\node at (-0.5,-2.7) {\tiny{\textsc{tip}}};
+
+\draw[ultra thin] (3,0.27) -- (3.8,0.15);
+\draw[ultra thin] (-0.45,-2.8) -- (0,-3.15);
+\end{scope}
+
+\end{tikzpicture}

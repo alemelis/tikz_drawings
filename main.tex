@@ -1,0 +1,59 @@
+\documentclass{standalone}
+
+%~~~~ SPACING
+\usepackage{setspace}
+
+%~~~~ FONT AND GRAMMAR CHECKER
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+%~~~~ TEXT COLOR
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+%~~~~ HYPERLINK
+\usepackage{url}
+\usepackage[colorlinks=true,
+			citecolor=green!50!black, 
+			linkcolor=cyan!50!blue]{hyperref}
+
+%~~~~ MATH
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{cancel}
+\usepackage{mathrsfs} % per fare la L di L-circuit $\mathscr{L}$
+\usepackage{dsfont} % per le matrici dello ssm
+
+%~~~~ FIGURES & TABLES
+\usepackage{graphicx}
+\usepackage{multirow, adjustbox}
+\usepackage{subcaption}
+
+% ~~~~ TIKZ
+\usepackage{tikz, circuitikz}
+\usetikzlibrary{shapes,
+				arrows,
+				calc,
+				patterns,
+				decorations.pathmorphing,
+				decorations.markings}
+
+\usepackage{3dplot} %requires 3dplot.sty to be in same directory, or in your LaTeX installation			
+
+\begin{document}
+
+% \input{drawings/bonnie}
+
+% \input{drawings/sarsa}
+
+% \input{drawings/ocean}
+
+% \input{drawings/shark}
+
+% \input{drawings/mastcam}
+
+\input{drawings/cantilever}
+
+
+\end{document}

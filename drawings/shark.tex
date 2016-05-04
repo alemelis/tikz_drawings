@@ -1,0 +1,82 @@
+\begin{tikzpicture}[scale=0.95]
+
+\draw[dashed, pattern=crosshatch dots, pattern color=black!10] (0,0)circle(3);
+\draw[dashed, color=red, pattern=crosshatch dots, pattern color=red!10] (0,0)circle(1.8);
+\draw[dashed, color=cyan, pattern=crosshatch dots, pattern color=cyan!10] (0,0)circle(1.5);
+\draw[dashed, color=blue, pattern=crosshatch dots, pattern color=blue!10] (0,0)circle(0.6);
+
+\filldraw[green!50!black, fill=green!20, yshift=-0.5cm, xshift=0.5cm] (-0.15,4) -- (0.15,4) -- (0,4.28) -- cycle;
+\filldraw[green!50!black, fill=green!20, yshift=-1cm, xshift=-0.35cm] (-0.15,4) -- (0.15,4) -- (0,4.28) -- cycle;
+\filldraw[green!50!black, fill=green!20, yshift=-1.5cm, xshift=-1cm] (-0.15,4) -- (0.15,4) -- (0,4.28) -- cycle;
+\filldraw[green!50!black, fill=green!20, yshift=-1.75cm, xshift=0.25cm] (-0.15,4) -- (0.15,4) -- (0,4.28) -- cycle;
+
+\draw[thin, ->] (0,0) -- (45:3);
+\draw[thin, ->] (0,0) -- (45:1.5);
+\draw[thin, ->] (0,0) -- (-45:1.8);
+\draw[thin, ->] (0,0) -- (-45:0.6);
+\draw (45:3) node[above] {\textit{local radius}};
+\draw (45:1.5) node[right] {$lr/ 2$};
+\draw (-45:1.8) node[right] {$size_{fish} + size_{shark}$};
+\draw (-45:0.6) node[right] {\textit{size}};
+
+\draw[very thick, -triangle 45] (0,-0.1) -- (0,0.5);
+\draw[|-|, black!70!] (-0.5,-0.1) -- (-0.5,0.5);
+\draw (-0.7,0.2) node[left] {\textit{size}};
+
+\draw[dashed, pattern=crosshatch dots, pattern color=black!10, xshift=10.5cm, yshift=1.3cm] (-5.5,1)circle(0.2);
+\draw[xshift=10.5cm, yshift=1.3cm] (-5.2,1) node[right] {approach};
+\draw[dashed, color=blue, pattern=crosshatch dots, pattern color=blue!10, xshift=10.5cm, yshift=1.3cm] (-5.5,0.3)circle(0.2);
+\draw[xshift=10.5cm, yshift=1.3cm] (-5.2,0.3) node[right] {avoid};
+\draw[dashed, color=cyan, pattern=crosshatch dots, pattern color=cyan!10, xshift=10.5cm, yshift=1.3cm] (-5.5,-0.4)circle(0.2);
+\draw[xshift=10.5cm, yshift=1.3cm] (-5.2,-0.4) node[right] {orient};
+\draw[dashed, color=red, pattern=crosshatch dots, pattern color=red!10, xshift=10.5cm, yshift=1.3cm] (-5.5,-1.1)circle(0.2);
+\draw[xshift=10.5cm, yshift=1.3cm] (-5.2,-1.1) node[right] {avoid};
+
+\draw[xshift=10.5cm, yshift=1.3cm, black!30] (-6,-1.55) -- (-3,-1.55);
+
+\draw[dashed, pattern=checkerboard, pattern color=black!10, xshift=10.5cm, yshift=1.1cm] (-5.5,-1.8)circle(0.2);
+\draw[xshift=10.5cm, yshift=1.1cm] (-5.2,-1.8) node[right] {smooth turn};
+\draw[dashed, color=red, pattern=checkerboard, pattern color=red!10, xshift=10.5cm, yshift=1.1cm] (-5.5,-2.5)circle(0.2);
+\draw[xshift=10.5cm, yshift=1.1cm] (-5.2,-2.5) node[right] {pounce};
+\draw[dashed, color=red!20!yellow, pattern=checkerboard, pattern color=yellow!20, xshift=10.5cm, yshift=1.1cm] (-5.5,-3.2)circle(0.2);
+\draw[xshift=10.5cm, yshift=1.1cm] (-5.2,-3.2) node[right] {FOV};
+\draw[dashed, color=green!40!black!50, pattern=checkerboard, pattern color=green!10, xshift=10.5cm, yshift=1.1cm] 
+(-5.5,-3.9)circle(0.2);
+\draw[xshift=10.5cm, yshift=1.1cm] (-5.2,-3.9) node[right] {max angle};
+
+\draw[xshift=10.5cm, yshift=1.3cm, very thick, -triangle 45] (-5.5,1.5) -- (-5.5,2.1);
+\draw[xshift=10.5cm, yshift=1.3cm] (-5.2,1.8) node[right] {fish};
+
+\filldraw[green!50!black, fill=green!20, xshift=10.5cm, yshift=1.3cm] (-5.65,2.45) -- (-5.35,2.45) -- (-5.5,2.73) -- cycle;
+\draw[xshift=10.5cm, yshift=1.3cm] (-5.2,2.6) node[right] {food};
+
+\draw[xshift=10.5cm, yshift=1.1cm, very thick, -triangle 90, cyan] (-5.5,-5.3) -- (-5.5,-4.3);
+\draw[xshift=10.5cm, yshift=1.1cm] (-5.2,-4.8) node[right] {shark};
+
+\draw[black!30!, double, double=black!20, rounded corners=3pt, xshift=10.5cm, yshift=1.3cm] (-6,3)rectangle(-3,-5.9);
+
+\filldraw[dashed, pattern=checkerboard, pattern color=black!10, xshift=-6.5cm] (0,0)circle(4);
+
+\draw[dashed, color=red, pattern=checkerboard, pattern color=red!10, xshift=-6.5cm] (0,0)circle(1.8);
+
+\filldraw[red!20!yellow, pattern=checkerboard, pattern color=yellow!20, xshift=-6.5cm] (0,0) -- (45:4) arc (45.5:135:4) -- cycle;
+\draw[<->, xshift=-6.5cm, yellow!20!red, thick] (45:4) arc (45:135.5:4);
+\draw[xshift=-6.5cm] (0,4) node[below] {$\pi/2$};
+
+\filldraw[green!30, xshift=-6.5cm] (0,0) -- (85:2) arc (85:95:2) -- cycle;
+\filldraw[green!40!black!50, pattern=checkerboard, pattern color=green!10, xshift=-6.5cm] (0,0) -- (85:2) arc (85:95:2) -- cycle;
+\draw[<->, xshift=-6.5cm, green!20!black, thick] (85:2) arc (85:95:2);
+\draw[xshift=-6.5cm] (0,2) node[above] {$\pi/9$};
+
+\draw[thin, ->, xshift=-6.5cm] (0,0) -- (200:4);
+\draw[xshift=-6.5cm] (200:4) node[below] {\textit{local radius}};
+\draw[thin, ->, xshift=-6.5cm] (0,0) -- (-40:1.8);
+\draw[xshift=-6.5cm] (-40:1.8) node[below] {$size_{fish} + size_{shark}$};
+%\draw[xshift=-6.5cm] (0,4) node[above] {\textit{field of view}};
+
+\draw[very thick, -triangle 90, cyan, xshift=-6.5cm] (0,-0.5) -- (0,0.5);
+\draw[|-|, xshift=-6.5cm] (-0.5,-0.5) -- (-0.5,0.5);
+\draw[xshift=-6.5cm] (-0.7,0.0) node[left] {\textit{size}};
+
+
+\end{tikzpicture}
