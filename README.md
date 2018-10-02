@@ -8,21 +8,21 @@ This is a collection of drawings made with [TikZ](https://www.ctan.org/pkg/pgf?l
 - drawing codes are stored in `/drawings` folder
 
 ## Gallery
+<img src="gallery/cantilever.png" height="400" />
+[`cantilever`](drawings/cantilever.tex)
 
-![img](gallery/cantilever.png)
-`cantilever`
+<img src="gallery/curiosity_mastcam.png" width="600" />
+[`curiosity_mastcam`](drawings/curiosity_mastcam.tex)
 
-![img](gallery/curiosity_mastcam.png)
-`curiosity_mastcam`
+<img src="gallery/neural_net.png" height="300" />
+[`neural_net`](drawings/neural_net.tex)
 
-![img](gallery/neural_net.png)
-`neural_net`
-
+<img src="gallery/ocean.png" width="600" />
 ![img](gallery/ocean.png)
-`ocean`
+[`ocean`](drawings/ocean.tex)
 
-![img](gallery/sarsa.png)
-`sarsa`
+<img src="gallery/sarsa.png" height="600" />
+[`sarsa`](drawings/sarsa.tex)
 
-![img](gallery/shark.png)
-`shark`
+<img src="gallery/shark.png" width="600" />
+[`shark`](drawings/shark.tex)
