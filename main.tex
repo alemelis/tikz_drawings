@@ -22,8 +22,8 @@
 \usepackage{mathtools}
 \usepackage{xfrac}
 \usepackage{cancel}
-\usepackage{mathrsfs} % per fare la L di L-circuit $\mathscr{L}$
-\usepackage{dsfont} % per le matrici dello ssm
+\usepackage{mathrsfs} % $\mathscr{L}$
+\usepackage{dsfont} % ssm matrices
 
 %~~~~ FIGURES & TABLES
 \usepackage{graphicx}
@@ -39,21 +39,23 @@
 				decorations.pathmorphing,
 				decorations.markings}
 
-\usepackage{3dplot} %requires 3dplot.sty to be in same directory, or in your LaTeX installation			
+\usepackage{3dplot} %requires 3dplot.sty to be in same directory, or in your LaTeX installation
+
+\newcommand{\repopic}[1]{\input{drawings/#1}}	
 
 \begin{document}
 
-% \input{drawings/bonnie}
+% \repopic{cantilever}
 
-% \input{drawings/sarsa}
+% \repopic{neural_net}
 
-% \input{drawings/ocean}
+% \repopic{sarsa}
 
-% \input{drawings/shark}
+% \repopic{ocean}
 
-% \input{drawings/mastcam}
+% \repopic{shark}
 
-\input{drawings/cantilever}
+\repopic{curiosity_mastcam}
 
 
 \end{document}
