@@ -1,5 +1,8 @@
 # tikz_drawings
 
+[![Mentioned in Awesome TikZ](https://awesome.re/mentioned-badge.svg)](https://github.com/xiaohanyu/awesome-tikz)
+
+
 This is a collection of drawings made with [TikZ](https://www.ctan.org/pkg/pgf?lang=en) package in *LaTeX*.
 
 - `main.tex` embeds *LaTeX* code to generate the drawings, just comment out the required drawing
